@@ -44,15 +44,37 @@
                     <p>Mateo Menvielle</p>
                 </div>
             </div>
-            <iframe allow="microphone;" width=100% height=100%
+            <iframe style="height:100vh;width:100vw" frameBorder="0" 
+src="https://nicolas-andreis.github.io/Profebot/CDN/index.html?service-base-url=https%3A%2F%2Fapi-azure.botsonic.ai&token=ec2a326a-e204-4c55-b9aa-ef65028d9d2c&base-origin=https%3A%2F%2Fbot.writesonic.com&instance-name=Botsonic&standalone=true&page-url=https%3A%2F%2Fbot.writesonic.com%2Fbots%2Fc5d01e3f-06a4-4a87-88f2-f966a0bd1b17%2Fintegrations">
+</iframe>
+            <!-- <iframe allow="microphone;" width=100% height=100%
                 src="https://console.dialogflow.com/api-client/demo/embedded/b769c5c8-dd91-4f71-a8c1-135e0dbe780b">
-            </iframe>
+            </iframe> -->
         </div>
     </main>
     <footer>
         <p>Todos los derechos reservados. Desarrollado por Nicolás Andreis y Raphael Nicaise.</p>
     </footer>
     <script>
+        (function (w, d, s, o, f, js, fjs) {
+          w["botsonic_widget"] = o;
+          w[o] =
+            w[o] ||
+            function () {
+              (w[o].q = w[o].q || []).push(arguments);
+            };
+          (js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
+          js.id = o;
+          js.src = f;
+          js.async = 1;
+          fjs.parentNode.insertBefore(js, fjs);
+        })(window, document, "script", "Botsonic", "https://widget.writesonic.com/CDN/botsonic.min.js");
+        Botsonic("init", {
+          serviceBaseUrl: "https://api-azure.botsonic.ai",
+          token: "ec2a326a-e204-4c55-b9aa-ef65028d9d2c",
+        });
+      </script>
+    <!-- <script>
         window.addEventListener('message', (event) => {
             if (event.origin === 'https://console.dialogflow.com/api-client/demo/embedded/b769c5c8-dd91-4f71-a8c1-135e0dbe780b') {
                 const response = event.data.queryResult.fulfillmentText;
@@ -68,7 +90,7 @@
                     .catch(err => console.error(err));
             }
         });
-    </script>
+    </script> -->
 </body>
 
 </html>
